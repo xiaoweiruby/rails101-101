@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
      def index
       @groups = current_user.participated_groups
     end
-  end
+
 
     def show
     @group = Group.find(params[:id])
