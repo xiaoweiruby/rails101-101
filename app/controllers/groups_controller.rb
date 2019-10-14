@@ -7,13 +7,12 @@ class GroupsController < ApplicationController
     end
 
     def show
-   @group = Group.find(params[:id])
-   @posts = @group.posts
- end
-
+       @group = Group.find(params[:id])
+       @posts = @group.posts.order("created_at DESC")
+    end
 
     def new
-   @group = Group.new
+    @group = Group.new
   end
 
   def create
