@@ -1,6 +1,7 @@
 <div class="col-md-12">
   <% if current_user && current_user == @group.user %>
   <div class="group">
+     <%= link_to("Write a Post", new_group_post_path(@group), class: "btn btn-default pull-right")%>
     <%= link_to("Edit", edit_group_path(@group), class: "btn btn-primary pull-right")%>
    <% end %>
  </div>
